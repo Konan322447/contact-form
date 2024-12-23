@@ -1,0 +1,190 @@
+@font-face {
+    font-family: 'Karla';
+    src: url(assets/fonts/Karla-VariableFont_wght.ttf);
+}
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Karla';
+    font-size: 16px;
+}
+html{
+    scroll-behavior: smooth;
+}
+.container{
+    width: 100dvw;
+    height: fit-content;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: hsl(148, 38%, 91%);
+    padding: 10% 0%;
+    overflow-x: hidden;
+}
+#myForm{
+    display: flex;
+    flex-direction: column;
+    background: hsl(0, 0%, 100%);
+    padding: 2% 3%;
+    flex-basis: 40%;
+    gap: 2rem;
+    border-radius: 1rem;
+}
+.heading{
+    font-size: 30px;  
+    font-weight: 700;
+    color: hsl(187, 24%, 22%);
+}
+.name{
+    display: flex;
+    gap: 1rem;
+}
+.first, .last{
+    display: flex;
+    flex-direction: column;
+    flex-basis: 50%;
+    gap: 0.5rem;
+}
+.first input, .last input{
+    padding: 4% 4%;
+    border-radius: 0.3rem;
+    border: 1px solid  hsl(187, 24%, 22%);
+    outline:none;
+}
+.first input:focus, .last input:focus{
+    border-color: hsl(169, 82%, 27%);
+}
+
+.email{
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+.email input{
+    padding: 4% 4%;
+    border: 1px solid hsl(187, 24%, 22%);
+    border-radius: 0.3rem;
+    outline: none;
+}
+.email input:focus{
+    border-color: hsl(169, 82%, 27%);
+}
+.query{
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+.option{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+.option span{
+    display: flex;
+    gap: 1rem;
+    flex-basis: 50%;
+    border: 1px solid hsl(187, 24%, 22%);
+    padding: 2% 3%;
+    border-radius: 0.3rem;
+}
+.message{
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+.message textarea{
+    border: 1px solid hsl(187, 24%, 22%);
+    border-radius: 0.3rem;
+    outline: none;
+    padding: 3% 2%;
+}
+.message textarea:focus{
+    border-color: hsl(169, 82%, 27%);
+}
+
+.checkbox{
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+.checktop{
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+}
+button{
+    padding: 2.5%;
+    font-weight: 700;
+    color: hsl(0, 0%, 100%);
+    background: hsl(169, 82%, 27%);
+    border: none;
+    border-radius: 0.3rem;
+    transition: background 0.3s ease;
+}
+button:hover{
+    background: hsl(187, 24%, 22%);
+}
+label span{
+    color: hsl(187, 24%, 22%);
+}
+#firstNameError, #consentError, #lastNameError,#emailErrorOne, #emailErrorTwo, #queryError, #messageError{
+    color: hsl(0, 66%, 54%);
+    display: none;
+}
+
+.confirmation{
+    position: absolute;
+    background: hsl(187, 24%, 22%);
+    top: -100%;
+    padding: 2% 2%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+    border-radius: 1rem;
+    transition: top 1s ease-in-out;
+    .top{
+        display: flex;
+        gap: 1rem;
+        align-items: center;
+        color: hsl(0, 0%, 100%);
+        p{
+            font-weight: 700;
+        }
+    }
+    .bottom{
+        color: hsl(148, 38%, 91%);
+    }
+}
+input:hover, textarea:hover{
+    border: 1px solid hsl(169, 82%, 27%);
+    cursor: pointer;
+}
+
+@media only screen and (max-width: 768px){
+    #myForm{
+        flex-basis: 80%;
+        width: 100%;
+        border-radius: 1rem;
+        padding: 6%;
+    }
+    .name{
+        flex-direction: column;
+    }
+    .option{
+        flex-direction: column;
+        align-items: stretch;
+        span{
+            padding: 6% 7%;
+            p{
+                font-size: 19px;
+            }
+        }
+    }
+    .message textarea{
+        height: 40vh;
+    }
+    button{
+        padding: 5%;
+    }
+}

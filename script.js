@@ -90,6 +90,11 @@ myForm.addEventListener('submit', (e) => {
         });
         
         document.querySelector('.confirmation').style.top = '6%';
-        // myForm.reset();
+        document.body.style.overflow = 'hidden';
+        
+        setTimeout(() => {
+            myForm.reset();  
+            document.querySelector('.confirmation').style.top = '-100%';
+        }, 5000);
     }
 });

@@ -61,7 +61,7 @@ html{
     gap: 0.5rem;
 }
 .email input{
-    padding: 4% 4%;
+    padding: 3% 4%;
     border: 1px solid hsl(187, 24%, 22%);
     border-radius: 0.3rem;
     outline: none;
@@ -186,5 +186,9 @@ input:hover, textarea:hover{
     }
     button{
         padding: 5%;
+    }
+    .confirmation{
+        padding: 8% 10%;
+        width: 75vw;
     }
 }
